@@ -1,0 +1,40 @@
+{
+  "name": "slack-pipeline-tool",
+  "version": "1.0.0",
+  "description": "Backend for pipeline collaboration slack tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "link-module-alias"
+  },
+  "_moduleAliases": {
+    "@config": "config",
+    "@controller": "controller",
+    "@routes": "routes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-oloughlin/slack-pipeline-tool.git"
+  },
+  "keywords": [
+    "slack",
+    "pipeline",
+    "rest",
+    "express"
+  ],
+  "author": "Eoghan O'Loughlin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e-oloughlin/slack-pipeline-tool/issues"
+  },
+  "homepage": "https://github.com/e-oloughlin/slack-pipeline-tool#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dayjs": "^1.8.16",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.11"
+  },
+  "devDependencies": {
+    "link-module-alias": "^1.2.0"
+  }
+}
