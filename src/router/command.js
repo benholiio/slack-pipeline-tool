@@ -7,10 +7,6 @@ module.exports = (req, res) => {
 	const command = req.body.text;
 
 	switch (command) {
-		case 'help':
-			getHelp(req, res);
-		break;
-
 		case 'status':
 			getStatus(req, res);
 		break;
@@ -22,8 +18,9 @@ module.exports = (req, res) => {
 		case 'release':
 			release(req, res);
 		break;
-	
+
 		default:
+			getHelp(req, res);
 		break;
 	}
 };

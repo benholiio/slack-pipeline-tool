@@ -1,5 +1,7 @@
 ## Slack Pipeline tool
 
+A Free-range Friday project
+
 Deploy pipeline queue management using slack commands. Creates a queue on a per-channel basis
 
 Use the following commands in your squads channel:
