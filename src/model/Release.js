@@ -12,6 +12,15 @@ const releaseSchema = new Schema({
 			}
 		}
 	},
+	channel: {
+		type: String,
+		required: false,
+		validate: {
+			validator: (channel) => {
+				return typeof channel === 'string';
+			}
+		}
+	},
 	time: {
 		type: Number,
 		required: true,

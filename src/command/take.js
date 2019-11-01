@@ -2,7 +2,8 @@ const Release = require('@model/Release');
 
 module.exports = async (req, res) => {
 	const userCheck = await Release.find({
-		name: req.body.user_name
+		name: req.body.user_name,
+		channel: req.body.channel_name
 	});
 
 	if (userCheck.length > 0) {
@@ -11,6 +12,7 @@ module.exports = async (req, res) => {
 
 	const release = new Release({
 		name: req.body.user_name,
+		channel: req.body.channel_name,
 		time: new Date().getTime() / 1000,
 		active: true,
 	});

@@ -2,7 +2,8 @@ const Release = require('@model/Release');
 
 module.exports = async (req, res) => {
 	const release = await Release.find({
-		name: req.body.user_name
+		name: req.body.user_name,
+		channel: req.body.channel_name
 	});
 
 	if (release.length === 0) {
@@ -10,7 +11,8 @@ module.exports = async (req, res) => {
 	}
 
 	const result = await Release.deleteOne({
-		name: req.body.user_name
+		name: req.body.user_name,
+		channel: req.body.channel_name
 	});
 
 	if (result.ok && result.deletedCount) {
